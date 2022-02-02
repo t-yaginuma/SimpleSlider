@@ -1,0 +1,25 @@
+mixin creditContent(target, i)
+  ul.credits
+    -for(let j = 0; j < target.length; j++)
+      li.credit(class= target[j].collab ? 'collab' : null class= target[j].coming ? 'coming' : null)
+        a(href!=target[j].url target='_blank')
+          -if(target[j].collab)
+            span.name(class= !target[j].collab ? 'F-ROBr' : null)!=target[j].name
+            .infomation
+              span.F-ROBr.country!=common.countries_en[i] + ' / '
+              span.price.F-ROBr !{`&yen;${target[j].price.toLocaleString()} ( tax.in )`}
+              span.buy.F-ROBm.state_button BUY
+
+          -else
+            span.name(class= !target[j].collab ? 'F-ROBr' : null)!=target[j].name + ' : '
+            span.price.F-ROBr !{`&yen;${target[j].price.toLocaleString()} ( tax.in )`}
+            span.buy.F-ROBm BUY
+
+mixin credit(target)
+  ul.credits
+    -for(let i = 0; i < target.length; i++)
+      li.credit
+        a(href!=target[i].url target='_blank')
+          span.name!=target[i].name
+          span.price.F-ROBr !{`&yen;${target[i].price.toLocaleString()} ( tax.in )`}
+          span.state.F-ROBm.state_button BUY

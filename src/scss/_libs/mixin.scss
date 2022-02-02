@@ -1,0 +1,14 @@
+@use 'sass:math';
+//共通変数
+$BREAKPOINT: 736px;
+$BREAKPOINT_O: 737px;
+$mn: math.div(0.1rem * 320, 750);
+$IMG_DIR: '';
+
+@function vw($value: 0) {
+  @return math.div(100vw * $value, 750);
+}
+
+@function mn($value: 0) {
+  @return $value * $mn;
+}

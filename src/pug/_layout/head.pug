@@ -1,0 +1,48 @@
+-
+  var now = new Date()
+  now.getFullMonth = function() {
+    return (this.getMonth() < 9 ? '0'+(this.getMonth()+1) : this.getMonth()+1)
+  }
+  now.getFullDate = function() {
+    return (this.getDate() < 10 ? '0'+this.getDate() : this.getDate())
+  }
+  now.getFullHours = function() {
+    return (this.getHours() < 10 ? '0'+this.getHours() : this.getHours())
+  }
+  now.getFullMinutes = function() {
+    return (this.getMinutes() < 10 ? '0'+this.getMinutes() : this.getMinutes())
+  }
+  now.getFullSeconds = function() {
+    return (this.getSeconds() < 10 ? '0'+this.getSeconds() : this.getSeconds())
+  }
+  now.getFullTimes = function() {
+    return parseInt(
+      now.getFullYear()
+      + now.getFullMonth()
+      + now.getFullDate()
+      + now.getFullHours()
+      + now.getFullMinutes()
+      + now.getFullSeconds(), 10)
+  }
+
+meta(http-equiv="content-language" content="ja")
+meta(http-equiv="content-type" content="text/html; charset=UTF-8")
+meta(http-equiv="content-style-type" content="text/css; charset=UTF-8")
+meta(http-equiv="content-script-type" content="text/javascript; charset=UTF-8")
+meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+meta(name='viewport' content='width=device-width')
+meta(name="format-detection" content="telephone=no")
+
+meta(property='og:type' content=meta.pageType)
+meta(property='og:site_name' content=meta.title)
+meta(property='og:title' content=meta.title)
+meta(property='og:description' content=meta.description)
+meta(property='og:url' content=meta.canonical)
+meta(property='og:image' content=meta.og+'og.png?'+ now.getFullTimes())
+meta(name="twitter:card" content!="summary_large_image")
+meta(name="twitter:title" content=meta.title)
+meta(name="twitter:description" content=meta.description)
+meta(name="twitter:image:src" content=meta.og+'og.png?'+now.getFullTimes())
+meta(name='description' content=meta.description)
+meta(name='keywords' content=meta.keywords)
+title!=`${meta.title}`

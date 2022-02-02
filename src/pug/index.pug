@@ -1,0 +1,9 @@
+extends ./_layout/layout
+block head
+  link(href='./assets/css/style.css?'+now.getFullTimes() rel='stylesheet' type='text/css')
+  script(src='./assets/js/bundle.js?'+now.getFullTimes()  defer)
+
+block content
+  .wrapper#wrapper
+    include ./_modules/main
+    include ./_modules/content

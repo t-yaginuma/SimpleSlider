@@ -1,0 +1,20 @@
+include ./svg.pug
+
+mixin share
+  .share
+    .share__title SHARE
+    ul.share__list
+      li.share__list__item
+        a.anchor.mShare.mo_op(href="#fb")
+          span.inner
+            +facebook
+
+      li.share__list__item
+        a.anchor.mShare.mo_op(href="#tw")
+          span.inner
+            +twitter
+
+      li.share__list__item
+        a.anchor.mShare.mo_op(href="#line")
+          span.inner
+            +line

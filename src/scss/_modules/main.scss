@@ -1,0 +1,52 @@
+@use '../_libs/mixin' as *;
+@use '../_libs/easings' as *;
+
+.main {
+  .slider{
+    position: relative;
+    width: 400px;
+    margin: auto;
+
+    &-slides{
+      display: flex;
+    }
+
+    &-slide{
+      position: relative;
+      width: 400px;
+      flex-shrink: 0;
+      opacity: 0;
+      transition: opacity 1000ms $ease-out-sine;
+
+      &--2{
+        left: -100%;
+      }
+
+      &--3{
+        left: -200%;
+      }
+
+      &--4{
+        left: -300%;
+      }
+
+      &--5{
+        left: -400%;
+      }
+
+      &--6{
+        left: -500%;
+      }
+
+      &--now{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($BREAKPOINT)) {
+  .main {
+
+  }
+}

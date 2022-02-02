@@ -1,0 +1,8 @@
+section.main#main
+  | main
+  .slider
+    .slider-box
+      ul.slider-slides
+        -for(let i =0; i < 6 ;i += 1)
+          li.slider-slide(class = `slider-slide--${i + 1}`)
+            img(src=`${IMG_DIR}/1_2_${i+1}.jpg`)
