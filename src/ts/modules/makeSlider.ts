@@ -2,6 +2,7 @@ import SimpleSlider from '../libs/SimpleSlider';
 
 const makeSlider = (): void => {
   const sliderElements = Array.from(document.getElementsByClassName('slider'));
+
   const sliders = sliderElements.map((sliderElement) => {
     const slider = sliderElement as HTMLElement;
 
