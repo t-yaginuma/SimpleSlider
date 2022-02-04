@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-@use './_libs/mixin' as *;
 @use './_libs/easings' as *;
-@use './_libs/keyframes' as *;
 @use './_base/base';
 @use './_base/reset';
 @use './_modules/main';
-@use './_modules/content';
